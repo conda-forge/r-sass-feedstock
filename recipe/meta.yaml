@@ -33,10 +33,16 @@ requirements:
   host:
     - r-base
     - r-digest
+    - r-fs
+    - r-htmltools
+    - r-rlang
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-digest
+    - r-fs
+    - r-htmltools
+    - r-rlang
 
 test:
   commands:
