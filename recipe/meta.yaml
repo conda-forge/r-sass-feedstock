@@ -32,18 +32,21 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-r6
     - r-digest
     - r-fs
     - r-htmltools
+    - r-rappdirs
     - r-rlang
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - r-r6
     - r-digest
     - r-fs
     - r-htmltools
+    - r-rappdirs
     - r-rlang
-
 test:
   commands:
     - $R -e "library('sass')"           # [not win]
