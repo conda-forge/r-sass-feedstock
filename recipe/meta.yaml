@@ -21,6 +21,13 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-r6                       # [build_platform != target_platform]
+    - r-htmltools                # [build_platform != target_platform]
+    - r-rlang                    # [build_platform != target_platform]
+    - r-rappdirs                 # [build_platform != target_platform]
+    - r-fs                       # [build_platform != target_platform]
+    - r-digest                   # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
