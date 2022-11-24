@@ -1,4 +1,4 @@
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sass_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sass/sass_{{ version }}.tar.gz
-  sha256: 94883c9e8219ca9609a704690c98d5dd9a0af52dfc9c98b0f7d8655b5a1365c0
+  sha256: d284af829d6a9b2ccc9d2698dd3f60ee0e7cd41594e211edc0a9c375ebd66542
 
 build:
   merge_build_host: true  # [win]
