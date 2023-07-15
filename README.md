@@ -3,6 +3,7 @@ About r-sass-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sass-feedstock/blob/main/LICENSE.txt)
 
+
 About r-sass
 ------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/rstudio/sass
 Package license: MIT
 
 Summary: An 'SCSS' compiler, powered by the 'LibSass' library. With this, R developers can use variables, inheritance, and functions to generate dynamic style sheets. The package uses the 'Sass CSS' extension language, which is stable, powerful, and CSS compatible.
+
 About r-sass
 ------------
 
