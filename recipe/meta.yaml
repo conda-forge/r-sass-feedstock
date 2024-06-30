@@ -1,6 +1,5 @@
 {% set version = "0.4.9" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-sass
@@ -13,8 +12,7 @@ source:
   sha256: e133049aad7964e0f6150257e1470b3748f36029322265ee797b8caf7517d4d2
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -29,7 +27,9 @@ requirements:
     - r-fs                       # [build_platform != target_platform]
     - r-digest                   # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -47,7 +47,6 @@ requirements:
     - r-rlang
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-r6
     - r-digest
     - r-fs
